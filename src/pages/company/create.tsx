@@ -35,7 +35,7 @@ const Create = () => {
     GetFieldsFromList<UsersSelectQuery>
   >({
     resource: "users",
-    name: "name",
+    // name: "name",
     meta: {
       gqlQuery: USERS_SELECT_QUERY
     }

@@ -2,14 +2,14 @@ import { Text } from "@/components/text";
 import { User } from "@/graphql/schema.types";
 import {
   ConfigProvider,
-  theme,
   Card,
   Dropdown,
   MenuProps,
   Button,
   Tag,
   Space,
-  Tooltip
+  Tooltip,
+  theme
 } from "antd";
 import { useMemo, memo } from "react";
 import {
@@ -25,7 +25,7 @@ import CustomAvatar from "@/components/custom-avatar";
 import { useNavigation, useDelete } from "@refinedev/core";
 
 type ProjectCardProps = {
-  id: number;
+  id: string;
   title: string;
   dueDate?: string;
   users?: {
@@ -33,10 +33,12 @@ type ProjectCardProps = {
     name: string;
     avatarUrl?: User["avatarUrl"];
   }[];
+  updatedAt: string;
 };
 
 const ProjectCard = ({ id, title, dueDate, users }: ProjectCardProps) => {
-  const token = theme.useToken();
+  const token = theme.useToken().token;
+  // console.log(token);
 
   const { edit } = useNavigation();
   const { mutate: deleteCard } = useDelete();
@@ -78,7 +80,7 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardProps) => {
       color: getDateColor({ date: dueDate }) as string,
       text: date.format("MMM D")
     };
-  }, ["dueDate"]);
+  }, [dueDate]);
 
   return (
     <ConfigProvider
@@ -147,7 +149,7 @@ const ProjectCard = ({ id, title, dueDate, users }: ProjectCardProps) => {
                   dueDateOptions.color === "default" ? "transparent" : "unset"
               }}
               color={dueDateOptions.color}
-              border={dueDateOptions.color !== "default"}
+              bordered={dueDateOptions.color !== "default"}
             >
               {dueDateOptions.text}
             </Tag>

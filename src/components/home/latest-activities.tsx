@@ -47,7 +47,7 @@ const LatestActivities = () => {
   return (
     <Card
       headStyle={{ padding: "16px" }}
-      style={{ body: { padding: "0 1rem" } }}
+      bodyStyle={{ padding: "0 1rem" }}
       title={
         <div
           style={{

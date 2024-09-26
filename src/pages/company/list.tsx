@@ -14,6 +14,7 @@ import {
 } from "@refinedev/antd";
 import { getDefaultFilter, useGo } from "@refinedev/core";
 import { Input, Space, Table } from "antd";
+import React from "react";
 
 export const CompanyList = ({ children }: React.PropsWithChildren) => {
   const go = useGo();
@@ -24,7 +25,7 @@ export const CompanyList = ({ children }: React.PropsWithChildren) => {
         {
           field: "name",
           operator: "contains",
-          value: values.name
+          value: values
         }
       ];
     },

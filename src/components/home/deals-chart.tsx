@@ -60,8 +60,9 @@ const DealsChart = () => {
 
   return (
     <Card
-      style={{ body: { padding: "24px 24px 0 24px" }, height: "100%" }}
+      style={{ height: "100%" }}
       headStyle={{ padding: "8px 16px" }}
+      bodyStyle={{ padding: "24px 24px 0 24px" }}
       title={
         <div
           style={{

@@ -27,8 +27,9 @@ const UpcomingEvents = () => {
 
   return (
     <Card
-      style={{ body: { padding: "0 1rem" }, height: "100%" }}
+      style={{ height: "100%" }}
       headStyle={{ padding: "8px 16px" }}
+      bodyStyle={{ padding: "0 1rem" }}
       title={
         <div
           style={{

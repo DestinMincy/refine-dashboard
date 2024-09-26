@@ -5,11 +5,9 @@ const ProjectCardSkeleton = () => {
     <Card
       size="small"
       style={{
-        body: {
-          display: "flex",
-          justifyContent: "center",
-          gap: "8px"
-        }
+        display: "flex",
+        justifyContent: "center",
+        gap: "8px"
       }}
       title={
         <Skeleton.Button

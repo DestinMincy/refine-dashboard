@@ -28,7 +28,7 @@ const EditPage = () => {
     GetFieldsFromList<UsersSelectQuery>
   >({
     resource: "users",
-    name: "name",
+    // name: "name",
     pagination: {
       mode: "off"
     },

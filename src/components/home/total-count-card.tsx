@@ -57,10 +57,10 @@ const DashboardTotalCountCard = ({
   return (
     <Card
       style={{
-        body: { padding: "8px, 8px, 8px, 12px" },
         height: "96px",
         padding: 0
       }}
+      bodyStyle={{ padding: "8px, 8px, 8px, 12px" }}
       size="small"
     >
       <div

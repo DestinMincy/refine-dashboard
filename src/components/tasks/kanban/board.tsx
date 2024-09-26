@@ -34,6 +34,10 @@ export const KanbanBoardContainer = ({ children }: React.PropsWithChildren) => {
   );
 };
 
+type Props = {
+  onDragEnd: (event: DragEndEvent) => void;
+};
+
 export const KanbanBoard = ({
   children,
   onDragEnd
@@ -49,10 +53,6 @@ export const KanbanBoard = ({
       distance: 5
     }
   });
-
-  type Props = {
-    onDragEnd: (event: DragEndEvent) => void;
-  };
 
   const sensors = useSensors(mouseSensor, touchSensor);
 

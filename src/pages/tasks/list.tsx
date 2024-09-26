@@ -76,7 +76,7 @@ const List = ({ children }: React.PropsWithChildren) => {
       ...stage,
       tasks: tasks.data.filter((task) => task.stageId?.toString() === stage.id)
     }));
-
+    console.log(tasks.data);
     return {
       unassignedStage,
       columns: grouped
@@ -153,7 +153,7 @@ const List = ({ children }: React.PropsWithChildren) => {
             )}
           </KanbanColumn>
 
-          {taskStages.columns.map((column) => (
+          {taskStages.columns?.map((column) => (
             <KanbanColumn
               key={column.id}
               id={column.id}
