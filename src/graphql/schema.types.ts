@@ -3665,12 +3665,12 @@ export type SubscriptionUpdatedOneUserArgs = {
 };
 
 export type Task = {
-  checklist: Array<CheckListItem>;
-  comments: TaskCommentsConnection;
-  commentsAggregate: Array<TaskCommentsAggregateResponse>;
+  checklist?: Array<CheckListItem>;
+  comments?: TaskCommentsConnection;
+  commentsAggregate?: Array<TaskCommentsAggregateResponse>;
   completed: Scalars["Boolean"]["output"];
   createdAt: Scalars["DateTime"]["output"];
-  createdBy: User;
+  createdBy?: User;
   description?: Maybe<Scalars["String"]["output"]>;
   dueDate?: Maybe<Scalars["DateTime"]["output"]>;
   id: Scalars["ID"]["output"];
@@ -3680,7 +3680,7 @@ export type Task = {
   updatedAt: Scalars["DateTime"]["output"];
   updatedBy?: Maybe<User>;
   users: Array<User>;
-  usersAggregate: Array<TaskUsersAggregateResponse>;
+  usersAggregate?: Array<TaskUsersAggregateResponse>;
 };
 
 export type TaskCommentsArgs = {
